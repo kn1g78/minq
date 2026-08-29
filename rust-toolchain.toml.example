@@ -1,0 +1,7 @@
+# Copy this file to rust-toolchain.toml ONLY if you are on Windows without
+# the MSVC build tools (see README, "Building on Windows without MSVC").
+# Most users do not need any rust-toolchain.toml: a recent stable toolchain
+# (>= 1.85) builds this project as-is.
+[toolchain]
+channel = "1.85.1-x86_64-pc-windows-gnu"
+components = ["clippy"]

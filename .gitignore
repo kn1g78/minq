@@ -1,0 +1,20 @@
+# Rust build artifacts
+/target/
+
+# Model weights and quantized exports — download from HuggingFace / ModelScope
+# (see README "Model weights"). Never commit these.
+/models/
+/*.minq
+
+# Machine-specific local build config. These two files exist only on machines
+# that need the "Windows without MSVC" workaround described in the README;
+# the repository carries *.example templates instead.
+/.cargo/config.toml
+/rust-toolchain.toml
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+
+/docs/

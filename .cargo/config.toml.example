@@ -1,0 +1,13 @@
+# Copy this file to .cargo/config.toml ONLY if you are on Windows without
+# the MSVC build tools (see README, "Building on Windows without MSVC").
+# Adjust both paths to your machine.
+
+# Point the GNU-target linker at your MinGW gcc.
+[target.x86_64-pc-windows-gnu]
+linker = "D:/mingw64/bin/gcc.exe"
+
+# Optional: MinGW ld cannot open files under non-ASCII paths, so if your
+# project path contains non-ASCII characters, redirect build artifacts to
+# an ASCII-only directory.
+[build]
+target-dir = "D:/minfer-target"

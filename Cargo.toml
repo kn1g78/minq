@@ -1,0 +1,22 @@
+[package]
+name = "minq"
+version = "0.1.0"
+edition = "2021"
+description = "A from-scratch CPU inference engine for LLaMA-family transformers, with block-quantized weights"
+license = "MIT"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+safetensors = "0.4"
+tokenizers = "0.21"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+rayon = "1.10"
+half = "2.4"
+rand = "0.8"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
